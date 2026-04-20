@@ -28,4 +28,7 @@ class Settings:
     JWT_ALGORITHM: str = "HS256"
     JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "dev-secret-key-change-in-production")
 
+    # CORS Configuration
+    CORS_ORIGINS: list = os.getenv("CORS_ORIGINS", "http://localhost:5173").split(",")
+
 settings = Settings()
