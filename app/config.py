@@ -20,7 +20,7 @@ class Settings:
     OPENAI_MODEL: str = os.getenv("OPENAI_MODEL", "gpt-4o")
 
     # MongoDB Configuration
-    MONGO_URI: str = os.getenv("MONGO_URI", "mongodb://localhost:27017/entrysafe")
+    MONGO_URI: str = os.getenv("MONGO_URL", os.getenv("MONGO_URI", "mongodb://localhost:27017/entrysafe"))
     MONGO_DB_NAME: str = "entrysafe"
     MONGO_CONNECT_TIMEOUT: int = 5000
 
